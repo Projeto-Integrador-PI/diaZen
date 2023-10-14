@@ -5,62 +5,43 @@ namespace App\Http\Controllers;
 use App\Models\Events;
 use App\Http\Requests\StoreEventsRequest;
 use App\Http\Requests\UpdateEventsRequest;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 class EventsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(): View
     {
-        //
+        return view('events.index', ['events' => Events::all()]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function create(): View
     {
-        //
+        return view('events.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreEventsRequest $request)
+    public function store(StoreEventsRequest $request): RedirectResponse
     {
-        //
+        return redirect()->route('events.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Events $events)
+    public function show(Events $events): View
     {
-        //
+        return view('events.show', ['event' => $events]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Events $events)
+    public function edit(Events $events): View
     {
-        //
+        return view('events.edit', ['event' => $events]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateEventsRequest $request, Events $events)
+    public function update(UpdateEventsRequest $request, Events $events): RedirectResponse
     {
-        //
+        return redirect()->route('events.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Events $events)
+    public function destroy(Events $events): RedirectResponse
     {
-        //
+        return redirect()->route('events.index');
     }
 }
