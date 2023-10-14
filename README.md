@@ -23,9 +23,9 @@
 ## Criando nova branch para desenvolvimento
 
 - Verificar se está na branch main, usar comando 'git branch';
-- Se exiter na branch main, use o comando 'git checkout -b <nome_da_branch/#numero_da_issue_aberta>';
+- Se exiter na branch main, use o comando 'git checkout -b <nome_da_branch/#numero_da_issue_aberta>'. **Exemplo**:
 ```
-**Exemplo** git checkout anotso/#1
+git checkout anotso/#1
 ```
 - Caso não esteja na branch main use o comando 'git checkout main';
 - Caso não exista issue aberta no repositório do projeto é só cria-lá. Caso seja destinada para um outro integrante é só informar no grupo e passar a URL para a pessoa
