@@ -21,4 +21,9 @@ class Events extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function feeling()
+    {
+        return $this->hasMany(Feeling::class);
+    }
 }
