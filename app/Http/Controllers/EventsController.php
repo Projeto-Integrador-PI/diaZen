@@ -44,11 +44,25 @@ class EventsController extends Controller
 
     public function update(EventsRequest $request, Events $events): RedirectResponse
     {
-        return redirect()->route('events.index');
+        try {
+            $events = DB::transaction(function () use($request, $events) {
+                $events = $events->update($request->all());
+            });
+            return redirect()->route('events.index');
+        } catch (\Throwable $error) {
+            return redirect()->back()->withErrors($error);
+        }
     }
 
     public function destroy(Events $events): RedirectResponse
     {
-        return redirect()->route('events.index');
+        try {
+            $events = DB::transaction(function () use($events) {
+                $events->delete();
+            });
+            return redirect()->route('events.index');
+        } catch (\Throwable $error) {
+            return redirect()->back()->withErrors($error);
+        }
     }
 }
