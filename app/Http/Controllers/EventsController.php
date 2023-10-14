@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Events;
-use App\Http\Requests\StoreEventsRequest;
-use App\Http\Requests\UpdateEventsRequest;
+use App\Http\Requests\EventsRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\DB;
 
 class EventsController extends Controller
 {
@@ -20,9 +20,16 @@ class EventsController extends Controller
         return view('events.create');
     }
 
-    public function store(StoreEventsRequest $request): RedirectResponse
+    public function store(EventsRequest $request): RedirectResponse
     {
-        return redirect()->route('events.index');
+        try {
+            $newEvent = DB::transaction(function () use($request)  {
+                return Events::create($request->all());
+            });
+            return redirect()->route('events.index');
+        } catch (\Throwable $error) {
+            return redirect()->back()->withErrors($error);
+        }
     }
 
     public function show(Events $events): View
@@ -35,7 +42,7 @@ class EventsController extends Controller
         return view('events.edit', ['event' => $events]);
     }
 
-    public function update(UpdateEventsRequest $request, Events $events): RedirectResponse
+    public function update(EventsRequest $request, Events $events): RedirectResponse
     {
         return redirect()->route('events.index');
     }
