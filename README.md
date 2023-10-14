@@ -28,4 +28,5 @@
 git checkout anotso/#1
 ```
 - Caso não esteja na branch main use o comando 'git checkout main';
-- Caso não exista issue aberta no repositório do projeto é só cria-lá. Caso seja destinada para um outro integrante é só informar no grupo e passar a URL para a pessoa
+- Na branch main execute o 'git pull origin main' **antes de iniciar o desenvolvimento de qualquer nova atividade**;
+- Caso não exista issue aberta no repositório do projeto é só cria-lá. Caso seja destinada para um outro integrante é só informar no grupo e passar a URL para a pessoa.
