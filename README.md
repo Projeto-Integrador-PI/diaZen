@@ -25,7 +25,7 @@
 - Verificar se está na branch main, usar comando 'git branch';
 - Se exiter na branch main, use o comando 'git checkout -b <nome_da_branch/#numero_da_issue_aberta>'. **Exemplo**:
 ```
-git checkout anotso/#1
+git checkout -b anotso/#1
 ```
 - Caso não esteja na branch main use o comando 'git checkout main';
 - Na branch main execute o 'git pull origin main' **antes de iniciar o desenvolvimento de qualquer nova atividade**;
