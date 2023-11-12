@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style-calendario.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h1>Calendário</h1>
+        <div class="calendar">
+            <div class="header">
+                <button id="prevBtn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="monthYear" id="monthYear"></div>
+                <button id="nextBtn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="container">
+                <div class="days">
+                    <div class="day">Dom</div>
+                    <div class="day">Seg</div>
+                    <div class="day">Ter</div>
+                    <div class="day">Qua</div>
+                    <div class="day">Qui</div>
+                    <div class="day">Sex</div>
+                    <div class="day">Sab</div>
+                </div>
+                <div class="dates" id="dates"></div>
+            </div>
+        </div>
+        <div class="eventoDia">
+            <div class="header">
+                <p>
+                    Eventos do dia
+                </p>
+                <img src="assets/sinal-mais.svg" alt="adcionar">
+            </div>
+            <div class="evento">
+                <div class="left">
+                    <h2>Reunião Projeto Integrador</h2>
+                    <div class="infos">
+                        <div class="info">Trabalho</div>
+                        <div class="info">20:00</div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="assets/concluido.svg" alt="concluido">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

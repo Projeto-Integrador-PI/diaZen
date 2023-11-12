@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+:root{
+    --branco: #f5f5f5 ;
+    --verdeClaro:#cef2e2;
+    --verde:#65d2c6;
+    --amarelado:#f8f8eb;
+    --roxo:#9C62AA ;
+    --preto: #6A6A6A;
+    --roxoClaro: #d59be3;   
+}
+
+body{
+    height: 100vh;
+    background-color: var(--branco);
+}
+
+header{
+    height: 3rem;
+    background-color: var(--verde);
+}
+h1{ font-size: 1.3rem;
+    font-weight: 500;
+    padding: 1rem 0;
+    color: var(--preto);
+    text-align: center;}
+
+h2,h3{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--roxo); 
+}
+p{  
+    font-weight: 500;
+    font-size: .8rem;
+    color: var(--verde);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.historico-container{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 10px 0;
+        background-color: var(--amarelado);
+        border-radius: 10px;
+        border: 1px solid var(--roxoClaro);
+        margin-bottom: 1.5rem;
+        
+}
+.dia{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--verdeClaro);
+    padding: .3rem .6rem;
+    border-bottom: 1px solid var(--roxoClaro);
+}
+.relato{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--amarelado);
+    padding: 16px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid var(--roxoClaro);
+}
+.relato-emoji{
+    margin-left: 5px;
+    text-align: center;
+}
+.relato-emoji img{
+    width: 25px;
+}
+.relato-emoji p{
+    font-size: .9rem;
+    color: var(--roxoClaro) !important;
+}
+.evento{
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    padding: 16px 12px;
+}
+.evento h3{
+    font-size: .9rem;
+}
+.sentimentos {
+    display: flex;
+    gap: .7rem;
+}
+.sentimentos img{
+    width: 22px;
+}
+.positivo-container,.negativo-container{
+    fill: #d59be3;
+    display: flex;
+}
+.negativo-container img{
+    width: 10px;
+    margin-right: 3px;
+}
