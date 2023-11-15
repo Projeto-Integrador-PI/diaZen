@@ -74,6 +74,14 @@ body {
     text-align: center;
   }
 
+  .meta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
   .meta input[type="text"] {
     border: none;
     border-bottom: 1px solid #000;

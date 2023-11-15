@@ -4,6 +4,7 @@ use App\Http\Controllers\EventsController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\GoalsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,5 +24,5 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('/hist', [HistoryController::class, 'index'])->name('hist.index');
 Route::get('/config', [SettingsController::class, 'index'])->name('config.index');
-
+Route::resource('goals',GoalsController::class);
 require __DIR__.'/auth.php';

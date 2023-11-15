@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+    @yield("style")
+
 </head>
 
 <body>
@@ -56,6 +58,8 @@
         integrity="sha384-pzjw8w+ua6GJJ9O3e1pIQf5F5OpaW60aiJaUup+GhqS8JQ6qDYgCeFExlEVmW8bX"
         crossorigin="anonymous"></script>
     <script src="{{ asset('assets/js/script.js')}}"></script>
+    @yield("js")
+
 </body>
 
 </html>
