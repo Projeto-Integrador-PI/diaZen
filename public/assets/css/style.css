@@ -32,8 +32,46 @@ body {
     margin-right: 10%;
   }
 
+  .menu2 {
+    margin-top: 50px;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(235, 165, 165);
+}
+
+.opcao i {
+    margin-right: 10px;
+    cursor: pointer;
+    color: #973c6e;
+    margin-right: 10px;
+    font-size: 20px;
+
+}
+
+.opcao span {
+    flex-grow: 1;
+    margin-right: 10px;
+
+}
+
+.link-apoio {
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: #65D2C6;
+
+}
   .titulo-centralizado{
     margin-top: 20px;
+    text-align: center;
   }
 
   .meta input[type="text"] {
