@@ -64,6 +64,7 @@
     <script src="{{ asset('assets/js/solid.min.js')}}"></script>
     <!-- Incluindo JS Custom -->
     <script src="{{ asset('assets/js/script.js')}}"></script>
+    @yield("js")
 </body>
 
 </html>

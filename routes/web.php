@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ProfileController;
@@ -27,6 +28,6 @@ Route::get('/hist', [HistoryController::class, 'index'])->name('hist.index');
 Route::get('/config', [SettingsController::class, 'index'])->name('config.index');
 Route::get('/apoie', [SupportController::class, 'index'])->name('apoie.index');
 Route::get('/termos', [TermsController::class, 'index'])->name('termos.index');
-
+Route::resource('calendar', CalendarController::class);
 
 require __DIR__.'/auth.php';
