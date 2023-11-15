@@ -11,7 +11,13 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <!-- Incluindo CSS personalizado -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-5_1_3.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('assets/css/font-awesome-all.min.css') }}">
+    <!-- Incluindo FontAwesome -->
+    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/brands.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/regular.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/solid.min.css') }}">
+    <!-- Incluindo CSS Custom -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 </head>
 
@@ -49,6 +55,14 @@
     <!-- Bibliotecas jQuery e Bootstrap JavaScript -->
     <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <!-- Incluindo FontAwesome -->
+    <script src="{{ asset('assets/js/all.min.js')}}"></script>
+    <script src="{{ asset('assets/js/brands.min.js')}}"></script>
+    <script src="{{ asset('assets/js/conflict-detection.min.js')}}"></script>
+    <script src="{{ asset('assets/js/fontawesome.min.js')}}"></script>
+    <script src="{{ asset('assets/js/regular.min.js')}}"></script>
+    <script src="{{ asset('assets/js/solid.min.js')}}"></script>
+    <!-- Incluindo JS Custom -->
     <script src="{{ asset('assets/js/script.js')}}"></script>
 </body>
 
