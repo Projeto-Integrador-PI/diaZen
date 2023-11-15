@@ -1,0 +1,88 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #F8F8EB;
+    width: 100%;
+  }
+  
+  .menu {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #65D2C6;
+    padding: 2%;
+   
+  }
+
+
+  .menu-horizontal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+   
+}
+
+  .btn-menu {
+    font-size: 20px;
+    color:  #F8F8EB;
+    background-color: #65D2C6;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+  }
+
+  .titulo-centralizado{
+    margin-top: 20px;
+  }
+  
+  .meta input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #000; 
+    background: transparent; 
+    padding: 2px;
+    color: #000; 
+}
+ 
+  .btn-menu:hover {
+    background-color: #CEF2E2;
+    color: #9C62AA;
+    border: none;
+  }
+  
+  .btn-menu:focus {
+    outline: none;
+  }
+  
+  .btn-menu:active {
+    background-color: #CEF2E2;
+    color: #6A6A6A;
+    border: none;
+  }
+  
+  .btn-menu:disabled {
+    background-color: transparent;
+    color: #9C62AA;
+  }
+  .mes-text {
+    margin-left: 5px;
+    margin-right: 5px; 
+}
+
+
+
+
+/* Início CSS para  Apoie e Termos*/
+p {
+  text-align: justify;
+}
+
+.qr-code {
+text-align: center;
+margin-top: 60px;
+}
+
+h3 {
+  margin-top: 20px;   /* Adicionei esse porque o título estava ficando colado no navbar*/
+}
+/* Fim CSS para  Apoie e Termos*/
