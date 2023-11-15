@@ -43,7 +43,7 @@
     </div>
     <!-- codigo de vcs-->
     <div class="container-fluid">
-        @yield('content')
+        @yield("content")
     </div>
 
     <div>
