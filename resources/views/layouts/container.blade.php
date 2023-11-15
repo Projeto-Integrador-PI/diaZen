@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DiaZen</title>
     <!-- Incluindo CSS Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-pzjw8w+ua6GJJ9O3e1pIQf5F5OpaW60aiJaUup+GhqS8JQ6qDYgCeFExlEVmW8bX"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-4_5_2.min.css') }}">
     <!-- Incluindo fonte Quicksand -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <!-- Incluindo CSS personalizado -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-5_1_3.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/font-awesome-all.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 </head>
 
@@ -49,12 +47,8 @@
     <div>
 
     <!-- Bibliotecas jQuery e Bootstrap JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha384-EIkY4waF+8FBH/h6cxfzntOW7c0MDAdoox9xEq+6yvq49Mw5fPeWjC+E7HcGTz6p"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-pzjw8w+ua6GJJ9O3e1pIQf5F5OpaW60aiJaUup+GhqS8JQ6qDYgCeFExlEVmW8bX"
-        crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/script.js')}}"></script>
 </body>
 
