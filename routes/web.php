@@ -12,8 +12,7 @@ use App\Http\Controllers\SupportController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-return view('eventos.index');
-
+    return view('eventos.index');
 });
 //Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
@@ -22,11 +21,13 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home.index');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 });
+
 Route::resource('events', EventsController::class);
 Route::get('/hist', [HistoryController::class, 'index'])->name('hist.index');
 Route::get('/config', [SettingsController::class, 'index'])->name('config.index');
