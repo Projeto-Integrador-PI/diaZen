@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/solid.min.css') }}">
     <!-- Incluindo CSS Custom -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+    @yield('style')
 </head>
 
 <body>
@@ -46,7 +47,7 @@
         <!-- Fim do menu -->
     </div>
     <!-- codigo de vcs-->
-    <div class="container-fluid">
+    <div class="container">
         @yield("content")
     </div>
 
