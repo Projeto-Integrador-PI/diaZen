@@ -19,20 +19,3 @@ document.addEventListener("DOMContentLoaded", function () {
     // Atualize o texto do botão do mês com o mês atual
     botaoMes.querySelector("span").textContent = meses[mes];
 });
-
-// Adicionar eventos de clique aos botões
-btnConfig.addEventListener("click", function () {
-
-// Redirecionar para a página de configurações
-window.location.href = "configuracoes.html";
-});
-
-btnHome.addEventListener("click", function () {
-// Redirecionar para a página inicial
-window.location.href = "pagina_home.html";
-});
-btnCalendario.addEventListener("click", function () {
-// Redirecionar para a página do calendário
-window.location.href = "pagina_calendario.html";
-
-});
