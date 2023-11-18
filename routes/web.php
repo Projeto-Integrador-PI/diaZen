@@ -12,7 +12,7 @@ use App\Http\Controllers\SupportController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function(){
-    return view('sentimento.index');
+    return view('acesso.index');
 });
 //Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
