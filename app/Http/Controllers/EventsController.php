@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Events;
 use App\Http\Requests\EventsRequest;
+use App\Models\CategoryEvents;
+use App\Services\EventsService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\DB;
@@ -17,17 +19,21 @@ class EventsController extends Controller
 
     public function create(): View
     {
-        return view('events.create');
+        return view('eventos.create',[
+            'categories' => CategoryEvents::all()
+        ]);
     }
 
     public function store(EventsRequest $request): RedirectResponse
     {
+        // dd(EventsService::prepareDataToSave($request));
         try {
             $newEvent = DB::transaction(function () use($request)  {
-                return Events::create($request->all());
+                return Events::create(EventsService::prepareDataToSave($request));
             });
-            return redirect()->route('events.index');
+            return redirect()->route('home.index');
         } catch (\Throwable $error) {
+            dd($error);
             return redirect()->back()->withErrors($error);
         }
     }

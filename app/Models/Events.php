@@ -14,7 +14,8 @@ class Events extends Model
         'description',
         'date',
         'hour',
-        'user_id'
+        'user_id',
+        'category_id'
     ];
 
     public function user()
@@ -25,5 +26,10 @@ class Events extends Model
     public function feeling()
     {
         return $this->hasMany(Feeling::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }
