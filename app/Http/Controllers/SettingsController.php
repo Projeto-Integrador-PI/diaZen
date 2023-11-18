@@ -8,6 +8,11 @@ class SettingsController extends Controller
 {
   public function index()
   {
-    return view('apoie.index');
+    return view('config.index');
+  }
+
+  public function help()
+  {
+    return view('ajuda.index');
   }
 }

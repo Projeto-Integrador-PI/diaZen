@@ -28,7 +28,7 @@
         <!-- Linha para o menu -->
         <div class="menu menu-horizontal justify-content-center">
             <!-- Coluna para o botão de configurações -->
-            <a href="{{ route('profile.edit') }}" class="btn btn-menu mx-3">
+            <a href="{{ route('config.index') }}" class="btn btn-menu mx-3">
                 <i class="fas fa-user-cog"></i>
             </a>
 
