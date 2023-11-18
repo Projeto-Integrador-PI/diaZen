@@ -42,6 +42,15 @@
                 <i class='fas fa-calendar-check'></i>
             </button>
 
+            @if (!empty(auth()->user()))
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-menu">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </button>
+                </form>
+            @endif
+
 
         </div>
         <!-- Fim do menu -->
