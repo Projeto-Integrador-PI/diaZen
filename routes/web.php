@@ -11,9 +11,10 @@ use App\Http\Controllers\TermsController;
 use App\Http\Controllers\SupportController;
 use Illuminate\Support\Facades\Route;
 
-/*Route::get('/', function(){
-    return view('welcome');
-});*/
+Route::get('/', function () {
+    return view('eventos.index');
+});
+//Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
