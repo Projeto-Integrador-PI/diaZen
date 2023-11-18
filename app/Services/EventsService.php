@@ -29,7 +29,7 @@ class EventsService
      * Retorna os próximos eventos
      * @return Events
      */
-    public static function nextEvents(): Events
+    public static function nextEvents(): object
     {
         $events = auth()->user()->events()->where('date', '>=', Carbon::now())->get();
         return $events;

@@ -72,22 +72,27 @@
     <table class="table">
     <thead>
         <tr>
-            <th scope="col" colspan="3">
-                <center>Histórico</center>
+            <th scope="col" colspan="2">
+                <center>Eventos</center>
+            </th>
+            <th>
+                <a href="{{ route('events.index') }}">
+                    <i class="fa-solid fa-list"></i>
+                </a>
             </th>
         </tr>
         <tr>
             <th scope="col">Dia</th>
-            <th scope="col">Sentimento</th>
-            <th scope="col">Descrição</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Editar</th>
         </tr>
     </thead>
     <tbody class="table-group-divider">
     </tbody>
         @forelse ($dates as $date)
             <tr>
-                <td>{{ $date->day}}</td>
-                <td>{{ $date->feeling}}</td>
+                <td>{{ $date->dateFormat($date)}}</td>
+                <td>{{ $date->name}}</td>
                 <td>{{ $date->description}}</td>
             </tr>
         @empty
