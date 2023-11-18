@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+:root{
+    --branco: #f5f5f5 ;
+    --verdeClaro:#cef2e2;
+    --verde:#65d2c6;
+    --amarelado:#f8f8eb;
+    --roxo:#9C62AA ;
+    --preto: #6A6A6A;
+    --roxoClaro: #d59be3;   
+}
+
+body{
+    background-color: var(--branco);
+}
+main{
+    height: 100vh;
+    max-width: 18rem;
+    margin: 0 auto;
+}
+header{
+    height: 3rem;
+    background-color: var(--verde);
+}
+
+h2{
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--roxo); 
+    padding: 2rem 0 .5rem 0;
+}
+p{  
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+div{
+    display:flex;
+    flex-direction: column;
+}
+label{
+    color: var(--roxo);
+    width: fit-content;
+    padding: .1rem .3rem;
+    font-size: .7rem;
+    font-weight: 500;
+    transform: translate(.5rem, .45rem);
+    background-color: var(--verdeClaro);
+}
+input{
+    padding: 1rem 1rem 1rem .6rem;
+    background-color: var(--amarelado);
+    border: 1px solid var(--roxoClaro);
+    border-radius: 10px;
+    color: var(--verde);
+    margin: 0 0 .5rem 0;
+}
+.dia{
+    font-weight: 400;
+    font-size: .9rem;
+    padding: .2rem .6rem;
+    background-color: var(--verdeClaro);
+    color: var(--roxo);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.relato{
+    padding: .8rem 1rem;
+    display: flex;
+    gap: 1rem;
+    border-top: 1px solid var(--roxoClaro);
+    border-bottom: 1px solid var(--verdeClaro);
+}
+
+.relato-emoji {
+    text-align: center;
+    color: var(--roxoClaro);
+}
+
+.evento {
+    padding: .8rem 1rem;
+}
+.evento h3{
+    font-size: .9rem;
+    font-weight: 400;
+    padding: 0 0 .3rem 0;
+}
+
+.sentimentos {
+    display: flex;
+    justify-content: space-between;
+    padding: .0rem 1rem 1rem 1rem;
+}
+
+.sentimentos div{
+    font-size: 12px;
+    display: flex;
+    gap: .4rem;
+}
+
+.sentimentos img {
+    width: 12px;
+    height: 12px;
+}
