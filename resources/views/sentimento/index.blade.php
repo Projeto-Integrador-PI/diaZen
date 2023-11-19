@@ -1,6 +1,7 @@
 @extends("layouts.container")
 @section('style')
 <style>
+
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@400;700;900&display=swap');
     :root {
   --diazen-bg-color: #F8F8EB;
@@ -239,8 +240,6 @@ input::placeholder {
 
   .btn-primary{
     position: relative;
-    left: calc(50% - 150px);
-    transform: translate(-50%, -50%);
     display: flex;
     border-radius: 10px;
     align-items: center;
@@ -307,31 +306,83 @@ input[type=text] {
 .resized-text{
   height: 115px;
 }
+.emotion-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .emotion-btn img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .emotions p {
+      text-align: center;
+    }
+
+    .small-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.small-button > div {
+  margin: 50px;
+}
+
+.small-button > div:first-child {
+  margin-right: 100px;
+}
+
+.small-button > div:last-child {
+  margin-left: 50px;
+}
+
 
 </style>
 @endsection
 @section("content")
-<div class="content">
+
+  <div class="content">
     <div class="container">
       <div class="message-sentimento">
         <h1>Sentimento</h1>
         <h2>Como você está se sentindo hoje?</h2>
       </div>
-      <div class="emotions">
-        <div>
-          <i class="fa-solid fa-face-smile-beam fa-2x" style="color: #9c62aa;"></i>
-          <i class="fa-solid fa-face-smile fa-2x" style="color: #65d2c6;"></i>
-          <i class="fa-solid fa-face-meh-blank fa-2x" style="color: #9c62aa;"></i>
-          <i class="fa-solid fa-face-sad-tear fa-2x" style="color: #9c62aa;"></i>
-          <i class="fa-solid fa-face-angry fa-2x" style="color: #9c62aa;"></i>
+      <div class="row emotions">
+        <div class="col-md">
+          <button class="emotion-btn" onclick="selectEmotion('Em paz')">
+            <i class="fa-solid fa-face-smile-beam fa-2x" style="color: #9c62aa;"></i>
+            <p>Em paz</p>
+          </button>
         </div>
-      </div>
-      <div class="emotions">
-        <p>Em paz</p>
-        <p>Feliz</p>
-        <p>Neutro</p>
-        <p>Triste</p>
-        <p>Raiva</p>
+        <div class="col-md">
+          <button class="emotion-btn" onclick="selectEmotion('Feliz')">
+            <i class="fa-solid fa-face-smile fa-2x" style="color: #65d2c6;"></i>
+            <p>Feliz</p>
+          </button>
+        </div>
+        <div class="col-md">
+          <button class="emotion-btn" onclick="selectEmotion('Neutro')">
+            <i class="fa-solid fa-face-meh-blank fa-2x" style="color: #9c62aa;"></i>
+            <p>Neutro</p>
+          </button>
+        </div>
+        <div class="col-md">
+          <button class="emotion-btn" onclick="selectEmotion('Triste')">
+            <i class="fa-solid fa-face-sad-tear fa-2x" style="color: #9c62aa;"></i>
+            <p>Triste</p>
+          </button>
+        </div>
+        <div class="col-md">
+          <button class="emotion-btn" onclick="selectEmotion('Raiva')">
+            <i class="fa-solid fa-face-angry fa-2x" style="color: #9c62aa;"></i>
+            <p>Raiva</p>
+          </button>
+        </div>
       </div>
       <form action="" class="fields">
         <label for="sbom">O que houve de bom?</label>
@@ -341,20 +392,21 @@ input[type=text] {
         <label for="sobs">Alguma observação?</label>
         <input type="text" id="sobs" placeholder="Digite aqui..." class="resized-text">
       </form>
-      <!-- Padronizaremos os botões de que forma? Claros c/ borda roxa ou escuros c/ texto branco? -->
-      <div class="row">
-        <div class="col-md-6 d-flex justify-content-center">
-          <button class="btn btn-primary">
-            <i class="fa-solid fa-x" style="color: #f8f8eb; padding-right: 0.5em;"></i>Cancelar
-          </button>
+      <div class="small-button">
+        <div>
+          <button class="btn btn-primary" type="button">Cancelar</button>
         </div>
-        <div class="col-md-6">
-            <button class="btn btn-primary">
-            <i class="fa-solid fa-check" style="color: #f8f8eb; padding-right: 0.5em;"></i>Salvar
-          </button>
+        <div>
+          <button class="btn btn-primary " type="button" >Salvar</button>
         </div>
       </div>
-
     </div>
   </div>
+
+  <script>
+    function selectEmotion(emotion) {
+      alert("Emotion selected: " + emotion);
+      // You can perform additional actions here
+    }
+  </script>
   @endsection
