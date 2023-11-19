@@ -2,20 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\EventsService;
+use App\Services\DailyService;
 use Carbon\Carbon;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        return view('acesso.index');
+    }
+
+    public function dashboard()
+    {
         $dateNow = Carbon::now();
-        // setlocale(LC_TIME, 'Brazil');
         return view('dashboard.index', [
             'dateNow' => $dateNow->format('d/m/Y'),
             'dayWeek' => $dateNow->format('l'),
-            'dates' => EventsService::nextEvents()
+            'dates' => DailyService::getDailyFiveReg()
         ]);
     }
 }

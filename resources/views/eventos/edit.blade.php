@@ -48,48 +48,66 @@
         text-align: center;
     }
 
+    .emotion-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .emotion-btn img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .emotions p {
+        text-align: center;
+    }
+
 </style>
 @endsection
 @section("content")
-<form class="container mt-5" action="{{ route('events.store') }}" method="POST">
+<form class="container mt-5" method="POST"
+@if (!empty($feelings))
+    action="{{ route('events.setFeeling', ['event' => $event->id] ) }}"
+@endif
+@if (empty($feelings))
+    action="{{ route('events.update', ['event' => $event->id] ) }}"
+@endif
+>
     @csrf
-    <h1 class="titulo">Adicionar evento</h1>
-
-    @if (!empty($error))
-
+    @if (empty($feelings))
+        @method('put')
+        <h1 class="titulo">Atualizar evento</h1>
+    @endif
+    @if (!empty($feelings))
+        <h1 class="titulo">Informar o sentimento referente ao evento</h1>
     @endif
 
-    <div class="form-group mt-4">
-        <label for="calendario">Data e Hora do Evento</label>
-        <input type="datetime-local" class="form-control" id="calendario" name="date">
-    </div>
+    @include('eventos.components.title-date')
 
-    <div class="form-group mt-4">
-        <label for="titulo">Nome do Evento</label>
-        <input type="text" class="form-control" id="titulo" placeholder="Digite aqui..." name="name">
-    </div>
-
-    <div class="form-group mt-4">
-        {{-- <label for="categoria">Categoria</label>
-        <div class="input-group">
-            <input type="text" class="form-control" id="categoria" placeholder="Digite o nome da categoria: ex festa, apresentação...">
-            <div class="input-group-append">
+    @if (!empty($feelings))
+        <div class="pt-3">
+            @include('sentimento.components.feeling')
+        </div>
+    @endif
+    @if (!empty($categories))
+        <div class="form-group mt-4">
+            <div class="form-floating">
+                <select class="form-select" id="category" name="category" aria-label="Floating label select example">
+                    <option value="">Selecione uma categoria</option>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id}}" {{ ($category->id == $event->category_id) ? 'selected' : ''}}>{{ $category->name }}</option>
+                    @endforeach
+                </select>
+                <label for="category">Categoria</label>
             </div>
-        </div> --}}
-        <div class="form-floating">
-            <select class="form-select" id="category" name="category" aria-label="Floating label select example">
-                <option value="">Selecione uma categoria</option>
-                @foreach ($categories as $category)
-                    <option value="{{ $category->id}}">{{ $category->name }}</option>
-                @endforeach
-            </select>
-            <label for="category">Categoria</label>
-          </div>
-    </div>
+        </div>
+    @endif
 
     <div class="row mt-4">
         <div class="col">
-            <a href="{{ route('home.dashboard') }}" class="btn btn-secondary3">Cancelar</a>
+            <a href="{{ route('calendar.index') }}" class="btn btn-secondary3">Cancelar</a>
         </div>
         <div class="col text-right">
             <button class="btn btn-primary3" type="submit">Salvar</button>

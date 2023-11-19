@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Services\DailyService;
 use Illuminate\Http\Request;
 
-class FeelingController extends Controller
+class DailyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +20,7 @@ class FeelingController extends Controller
      */
     public function create()
     {
-        //
+        return view('sentimento.index');
     }
 
     /**
@@ -28,7 +28,8 @@ class FeelingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DailyService::newDay($request);
+        return redirect()->route('home.dashboard');
     }
 
     /**

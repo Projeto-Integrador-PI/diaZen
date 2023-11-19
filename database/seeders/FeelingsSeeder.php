@@ -14,14 +14,11 @@ class FeelingsSeeder extends Seeder
     public function run(): void
     {
         $feelings = [
+            'Em paz',
             'Feliz',
+            'Neutro',
             'Triste',
-            'Ansiedade',
-            'Alegria',
-            'Animação',
-            'Incomodo',
-            'Timidez',
-            'Satisfação'
+            'Raiva'
         ];
 
         foreach ($feelings as $feeling) {
