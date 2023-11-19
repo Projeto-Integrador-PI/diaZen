@@ -24,76 +24,6 @@
 
   /* Nav bar - start */
 
-  body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #F8F8EB;
-    width: 100%;
-}
-
-.menu {
-    width: 100%;
-    border-radius: 10px;
-    background-color: #65D2C6;
-    padding: 2%;
-
-}
-
-.menu-horizontal {
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-}
-
-.btn-menu {
-    font-size: 20px;
-    color: #F8F8EB;
-    background-color: #65D2C6;
-    border-radius: 10px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10%;
-}
-
-.titulo-centralizado {
-    margin-top: 20px;
-}
-
-.meta input[type="text"] {
-    border: none;
-    border-bottom: 1px solid #000;
-    background: transparent;
-    padding: 2px;
-    color: #000;
-}
-
-.btn-menu:hover {
-    background-color: #CEF2E2;
-    color: #9C62AA;
-    border: none;
-}
-
-.btn-menu:focus {
-    outline: none;
-}
-
-.btn-menu:active {
-    background-color: #CEF2E2;
-    color: #6A6A6A;
-    border: none;
-}
-
-.btn-menu:disabled {
-    background-color: transparent;
-    color: #9C62AA;
-}
-
-.mes-text {
-    margin-left: 5px;
-    margin-right: 5px;
-}
 
   /* Nav bar - ending */
 
@@ -101,8 +31,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Quicksand';
-  background-color: var(--diazen-bg-color);
-  color: var(--diazen-text-color);
+  background-color:#f5f5f5;
+
 }
 
 body > div {
@@ -110,8 +40,7 @@ body > div {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  /* color: var(--diazen-icon-and-outline-color); */
-  color: var(--diazen-text-color);
+
   font-weight: 400;
 }
 
@@ -139,7 +68,7 @@ input::placeholder {
   align-items: center;
   min-height: 3rem;
   max-height: 5rem;
-  background-color: var(--diazen-header-btn-color);
+  background-color: #F8F8EB;
   padding: .5rem 2rem;
 }
 
@@ -168,7 +97,7 @@ input::placeholder {
   border-radius: .2rem;
   width: 100%;
   height: 3rem;
-  background-color: var(--diazen-input-bg-color);
+  background-color: #F8F8EB;
   padding-left: .5rem;
   box-sizing: border-box;
 }
@@ -183,7 +112,7 @@ input::placeholder {
   padding: .1rem;
   border-radius: .3rem;
   color: var(--diazen-icon-and-outline-color);
-  background-color: var(--diazen-div-text-bg-color);
+  background-color: #F8F8EB;
   max-width: fit-content;
 }
 
@@ -299,7 +228,7 @@ input[type=text] {
   border: var(--diazen-border-size) solid var(--diazen-icon-and-outline-color);
   border-radius: var(--diazen-border-radius);
   box-sizing: border-box;
-  background-color: #F8F8EB;
+  background-color: #f5f5f5;
 
 }
 
