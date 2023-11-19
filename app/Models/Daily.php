@@ -6,17 +6,17 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Events extends Model
+class Daily extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'good',
+        'bad',
         'description',
         'date',
-        'hour',
         'user_id',
-        'category_id'
+        'feeling_id'
     ];
 
     public function user()
@@ -26,17 +26,12 @@ class Events extends Model
 
     public function feeling()
     {
-        return $this->hasOne(Feeling::class);
+        return $this->belongsTo(Feeling::class);
     }
 
-    public function category()
+    public function dateFormat(Daily $day)
     {
-        return $this->belongsTo(Category::class);
-    }
-
-    public function dateFormat(Events $event)
-    {
-        $dateCarbon = new Carbon($event->date);
+        $dateCarbon = new Carbon($day->created_at);
         return $dateCarbon->format('d/m/Y');
     }
 }

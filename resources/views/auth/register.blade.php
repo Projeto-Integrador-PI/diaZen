@@ -1,4 +1,29 @@
 @extends('layouts.container')
+@section('style')
+<style>
+    .btn-acessar,
+    .btn-criar {
+        font-size: 20px;
+        background-color: #65D2C6;
+        color: #fff;
+        border-radius: 15px;
+        width: 300px;
+        /* Largura desejada */
+        height: 50px;
+    }
+
+    .btn-acessar:hover,
+    .btn-criar:hover {
+        background-color: #9C62AA;
+        color: #FFFFFF;
+    }
+
+    /* Adiciona algum espaço entre os botões */
+    .default-button {
+        margin-bottom: 10px;
+    }
+</style>
+@endsection
 @section('content')
 <form class="pt-5" method="POST" action="{{ route('register') }}">
     @csrf
@@ -42,9 +67,9 @@
 
     <div class="row pt-3">
         <div class="col-md-12 d-flex justify-content-center">
-            <button class="btn btn-primary">
-                Criar conta
-            </button>
+            <div class="default-button d-flex justify-content-center">
+                <button class="btn btn-acessar">Criar conta</button>
+            </div>
         </div>
     </div>
 </form>

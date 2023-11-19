@@ -33,7 +33,7 @@
             </a>
 
 
-            <a href="{{ route('home.index') }}" class="btn btn-menu mx-3">
+            <a href="{{ route('home.dashboard') }}" class="btn btn-menu mx-3">
                 <i class="fas fa-home"></i>
             </a>
 

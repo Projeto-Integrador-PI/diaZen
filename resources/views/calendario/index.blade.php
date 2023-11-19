@@ -1,4 +1,11 @@
 @extends('layouts.container')
+@section('style')
+<style>
+    table {
+        background-color: white;
+    }
+</style>
+@endsection
 @section('content')
     <link rel="stylesheet" href="{{ asset('assets/css/style-calendario.css') }}">
     <main>
@@ -26,27 +33,83 @@
                 <div class="dates" id="dates"></div>
             </div>
         </div>
-        <div class="eventoDia">
-            <div class="header">
-                <p>
-                    Eventos do dia
-                </p>
-                <img src="{{ asset('assets/icons/sinal-mais.svg') }}" alt="adcionar">
-            </div>
-            <div class="evento">
-                <div class="left">
-                    <h2>Reunião Projeto Integrador</h2>
-                    <div class="infos">
-                        <div class="info">Trabalho</div>
-                        <div class="info">20:00</div>
-                    </div>
-                </div>
-                <div class="right">
-                    <img src="{{ asset('assets/icons/concluido.svg') }}" alt="concluido">
-                </div>
-            </div>
-        </div>
+
     </main>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="3"><center>Eventos passados</center></th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Dia</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Sentimento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse ($pastEvents as $data)
+                        <tr>
+                            <td>{{ $data->dateFormat($data)}}</td>
+                            <td>{{ $data->name}}</td>
+                            <td>
+                                @if (!empty($data->feeling_id))
+                                    @include('eventos.components.feeling-icon')
+                                @endif
+                                @if (empty($data->feeling_id))
+                                <center>
+                                    <a href="{{ route('events.feeling', ['event'=> $data->id]) }}">
+                                        <i class="fa-solid fa-person-breastfeeding" title="Atribuir sentimento"style="color: #9c62aa;"></i>
+                                    </a>
+                                </center>
+                                @endif
+                            </td>
+                        </tr>
+                    @empty
+                        <td colspan="3">
+                            <center>Dados não encontrados</center>
+                        </td>
+                    @endforelse
+                </tbody>
+              </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="3">
+                            <center>Eventos agendados</center>
+                        </th>
+                    </tr>
+                    <tr scope="col">
+                        <th scope="col">Dia</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Editar</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    @forelse ($nextEvents as $nextEvent)
+                        <tr>
+                            <td>{{ $nextEvent->dateFormat($nextEvent)}}</td>
+                            <td>{{ $nextEvent->name}}</td>
+                            <td>
+                                <a href="{{ route('events.edit', ['event'=> $nextEvent->id]) }}">
+                                    <i class="fa-solid fa-pen" title="Editar evento"style="color: #9c62aa;"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <td colspan="3">
+                                <center>Dados não encontrados</center>
+                            </td>
+                        </tr>
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
+    </div>
 @endsection
 @section('js')
     <script>
