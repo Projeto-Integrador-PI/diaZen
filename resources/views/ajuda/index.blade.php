@@ -28,7 +28,7 @@
         height: 150px;
         border-radius: 15px;
         border-color:#9C62AA;
-        background-color: #F8F8EB;
+        background-color: #f5f5f5;
         margin-top: 10px;
         word-wrap: break-word;
 

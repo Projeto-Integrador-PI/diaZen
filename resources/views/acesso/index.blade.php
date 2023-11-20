@@ -28,7 +28,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Quicksand';
-            background-color: var(--diazen-bg-color);
+            background-color: #f5f5f5;
             color: var(--diazen-text-color);
         }
 

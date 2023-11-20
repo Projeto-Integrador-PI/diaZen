@@ -101,7 +101,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Quicksand';
-            background-color: var(--diazen-bg-color);
+            background-color: #f5f5f5;
             color: var(--diazen-text-color);
         }
 
@@ -307,7 +307,7 @@
             border: var(--diazen-border-size) solid var(--diazen-icon-and-outline-color);
             border-radius: var(--diazen-border-radius);
             box-sizing: border-box;
-            background-color: #F8F8EB;
+            background-color:#f5f5f5;
 
         }
 
