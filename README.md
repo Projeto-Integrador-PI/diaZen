@@ -99,7 +99,7 @@ Apresentado ao Centro Universitário Senac, como exigência parcial para obtenç
 <h3 align="center">Doações</h3>
 <p align="center">
 <img alt="menu" height="400" src="https://i.imgur.com/HqopurQ.jpg">
-<p align="center">Doe para nosso projeto através do QR CODE, assim podemos melhorar e aprimorar sua experiencia em nosso aplicativo</p>
+<p align="center">Doe para nosso projeto através do QR CODE, assim podemos melhorar e aprimorar sua experiencia em nosso aplicativo.</p>
 </p> 
 
 ## Instalando o projeto 
