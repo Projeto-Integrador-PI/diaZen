@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\EventsService;
 use Illuminate\Http\Request;
 
 class CalendarController extends Controller
@@ -11,7 +12,10 @@ class CalendarController extends Controller
      */
     public function index()
     {
-      return view('calendario.index');
+      return view('calendario.index', [
+            'pastEvents' => EventsService::pastEvents(),
+            'nextEvents' => EventsService::nextEvents()
+        ]);
     }
 
     /**

@@ -2,49 +2,50 @@
 @section('style')
 <style>
     .btn-acessar,
-    .btn-criar {
-        font-size: 20px;
-        background-color: #65D2C6;
-        color: #fff;
-        border-radius: 15px;
-        width: 300px;
-        /* Largura desejada */
-        height: 50px;
-    }
+        .btn-criar {
+            font-size: 20px;
+            background-color: #65D2C6;
+            color: #fff;
+            border-radius: 15px;
+            width: 300px;
+            /* Largura desejada */
+            height: 50px;
+        }
 
-    .btn-acessar:hover,
-    .btn-criar:hover {
-        background-color: #9C62AA;
-        color: #FFFFFF;
-    }
+        .btn-acessar:hover,
+        .btn-criar:hover {
+            background-color: #9C62AA;
+            color: #FFFFFF;
+        }
 
-    /* Adiciona algum espaço entre os botões */
-    .default-button {
-        margin-bottom: 10px;
-    }
+        /* Adiciona algum espaço entre os botões */
+        .default-button {
+            margin-bottom: 10px;
+        }
 </style>
 @endsection
 @section('content')
-<form class="pt-5" method="POST" action="{{ route('register') }}">
+<form class="pt-5" method="POST" action="{{ route('profile.update') }}">
     @csrf
+    @method('patch')
 
     <!-- Name -->
     <div>
         <x-input-label for="name" :value="__('Nome')" class="form-label"/>
-        <x-text-input id="name" class="form-control" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+        <x-text-input id="name" class="form-control" type="text" name="name" :value="$user->name" required autofocus autocomplete="name" />
         <x-input-error :messages="$errors->get('name')" class="mt-2" />
     </div>
 
     <!-- Email Address -->
     <div class="mt-4">
         <x-input-label for="email" :value="__('E-mail')" class="form-label"/>
-        <x-text-input id="email" class="form-control" type="email" name="email" :value="old('email')" required autocomplete="username" />
+        <x-text-input id="email" class="form-control" type="email" name="email" :value="$user->email" required autocomplete="username" />
         <x-input-error :messages="$errors->get('email')" class="mt-2" />
     </div>
 
     <!-- Password -->
     <div class="mt-4">
-        <x-input-label for="password" :value="__('Senha')" class="form-label"/>
+        <x-input-label for="password" :value="__('Nova senha')" class="form-label"/>
 
         <x-text-input id="password" class="form-control"
                         type="password"
@@ -56,7 +57,7 @@
 
     <!-- Confirm Password -->
     <div class="mt-4">
-        <x-input-label for="password_confirmation" :value="__('Confirmar a senha')" class="form-label"/>
+        <x-input-label for="password_confirmation" :value="__('Confirmar a nova senha')" class="form-label"/>
 
         <x-text-input id="password_confirmation" class="form-control"
                         type="password"
@@ -67,9 +68,7 @@
 
     <div class="row pt-3">
         <div class="col-md-12 d-flex justify-content-center">
-            <div class="default-button d-flex justify-content-center">
-                <button class="btn btn-acessar">Criar conta</button>
-            </div>
+            <button class="btn btn-acessar">Atualizar dados</button>
         </div>
     </div>
 </form>

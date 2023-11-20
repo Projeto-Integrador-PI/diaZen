@@ -24,6 +24,7 @@ class EventsRequest extends FormRequest
         return [
             'name' =>'required|min:3|max:255',
             'date' =>'required|date',
+            'category' =>'required',
         ];
     }
 }

@@ -28,19 +28,38 @@
         <!-- Linha para o menu -->
         <div class="menu menu-horizontal justify-content-center">
             <!-- Coluna para o botão de configurações -->
-            <button id="btnConfig" class="btn btn-menu mx-3">
+            <a href="{{ route('config.index') }}" class="btn btn-menu mx-3">
                 <i class="fas fa-user-cog"></i>
-            </button>
+            </a>
 
-            <button id="btnHome" class="btn btn-menu mx-3">
+
+            <a href="{{ route('home.dashboard') }}" class="btn btn-menu mx-3">
                 <i class="fas fa-home"></i>
-            </button>
+            </a>
 
-            <button id="btnCalendario" id="mesAtual" class="btn btn-menu">
-                <i class="bi bi-calendar-check-fill"></i>
-                <span class="mes-text">Novembro</span>
-                <i class='fas fa-calendar-check'></i>
-            </button>
+            @if (!empty(auth()->user()))
+                <a href="{{ route('calendar.index') }}" id="mesAtual" class="btn btn-menu">
+                    <i class="bi bi-calendar-check-fill"></i>
+                    <span class="mes-text">Novembro</span>
+                    <i class='fas fa-calendar-check'></i>
+                </a>
+            @endif
+            @if (empty(auth()->user()))
+                <button id="mesAtual" class="btn btn-menu">
+                    <i class="bi bi-calendar-check-fill"></i>
+                    <span class="mes-text">Novembro</span>
+                    <i class='fas fa-calendar-check'></i>
+                </button>
+            @endif
+
+            @if (!empty(auth()->user()))
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-menu">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </button>
+                </form>
+            @endif
 
 
         </div>

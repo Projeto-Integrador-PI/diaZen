@@ -48,8 +48,8 @@
             <div class="card-body">
                 <h3 class="card-title"><center>Sentimento</center></h3>
                 <div class="d-flex align-items-center justify-content-center pt-4">
-                    <a href="{{ route('feeling.create') }}" class="d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-plus"></i>
+                    <a href="{{ route('daily.create') }}" class="d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-plus" style="color: #9c62aa;"></i>
                     </a>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                 <h3 class="card-title"><center>Evento</center></h3>
                 <div class="d-flex align-items-center justify-content-center pt-4">
                     <a href="{{ route('events.create') }}" class="d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-plus" style="color: #9c62aa;"></i>
                     </a>
                 </div>
             </div>
@@ -75,20 +75,26 @@
             <th scope="col" colspan="3">
                 <center>Histórico</center>
             </th>
+            {{-- <th>
+                <a href="{{ route('hist.index') }}" title="Ver todos os eventos">
+                    <i class="fa-solid fa-list"style="color: #9c62aa;"></i>
+                </a>
+            </th> --}}
         </tr>
-        <tr>
+        <tr scope="col">
             <th scope="col">Dia</th>
             <th scope="col">Sentimento</th>
-            <th scope="col">Descrição</th>
+            <th scope="col">Nome</th>
         </tr>
     </thead>
     <tbody class="table-group-divider">
-    </tbody>
-        @forelse ($dates as $date)
+        @forelse ($dates as $data)
             <tr>
-                <td>{{ $date->day}}</td>
-                <td>{{ $date->feeling}}</td>
-                <td>{{ $date->description}}</td>
+                <td>{{ $data->dateFormat($data) }}</td>
+                <td>
+                    @include('eventos.components.feeling-icon')
+                </td>
+                <td>{{ $data->description }}</td>
             </tr>
         @empty
             <tr>
@@ -97,6 +103,7 @@
                 </td>
             </tr>
         @endforelse
+    </tbody>
     </table>
 </div>
 @endsection
