@@ -30,64 +30,76 @@ Apresentado ao Centro Universitário Senac, como exigência parcial para obtenç
 
 ## O projeto DiaZen
 
-<p align="center">Menu</p>
+<h3 align="center">Menu Inicial</h3>
 <p align="center">
 <img alt="menu" height="400" src="https://i.imgur.com/mSo3ugR.jpg">
+<p align="center">Acesso ao aplicativo, criar conta ou fazer login</p>
 </p>
 
-<p align="center">Inscrição</p>
+<h3 align="center">Inscrição</h3>
 <p align="center">
 <img alt="menu" height="400" src="https://i.imgur.com/crTUKae.jpg">
+<p align="center">Inserir dados do usuario para acesso ao aplicativo</p>
 </p>
 
-<p align="center">Login</p>
+<h3 align="center">Login</h3>
 <p align="center">
 <img alt="menu" height="400" src="https://i.imgur.com/YYuszlp.jpg">
+<p align="center">Entrar com e-mail de acesso e senha</p>
 </p>
 
-<p align="center">Configurações</p>
-<p align="center">
-<img alt="menu" height="400" src="https://i.imgur.com/mHKAkrQ.jpg">
-</p>
-
-<p align="center">Fale Conosco</p>
-<p align="center">
-<img alt="menu" height="400" src="https://i.imgur.com/og7sFUW.jpg">
-</p> 
-
-<p align="center">Doações</p>
-<p align="center">
-<img alt="menu" height="400" src="https://i.imgur.com/HqopurQ.jpg">
-</p> 
-
-<p align="center">Adicionar evento</p>
-<p align="center">
-<img alt="menu" height="400" src="https://i.imgur.com/dsZbPCy.jpg">
-</p> 
-
-<p align="center">Cadastro Sentimento</p>
-<p align="center">
-<img alt="menu" height="400" src="https://i.imgur.com/vBbkazl.jpg">
-</p> 
-
-<p align="center">Menu</p>
-<p align="center">
-<img alt="menu" height="400" src="https://i.imgur.com/Q0viwbE.jpg">
-</p> 
-
-<p align="center">Atualizar evento</p>
-<p align="center">
-<img alt="menu" height="400" src="https://i.imgur.com/de9VEKX.jpg">
-</p> 
-
-<p align="center">Calendário</p>
-<p align="center">
-<img alt="menu" height="400" src="https://i.imgur.com/RBET8oO.jpg">
-</p> 
-
-<p align="center">Termos e Condições</p>
+<h3 align="center">Termos e Condições</h3>
 <p align="center">
 <img alt="menu" height="400" src="https://i.imgur.com/g8Mv0xN.jpg">
+<p align="center">Para acessar o aplicativo DiarioZen é necessário ler e aceitar os termos e condições</p>
+</p> 
+
+<h3 align="center">Configurações</h3>
+<p align="center">
+<img alt="menu" height="400" src="https://i.imgur.com/mHKAkrQ.jpg">
+<p align="center">Pagina inicial de configurações, onde você pode acompanhar dados e funcionalidades do aplicativo</p>
+</p>
+
+<h3 align="center">Menu criação: Sentimentos e Eventos</h3>
+<p align="center">
+<img alt="menu" height="400" src="https://i.imgur.com/Q0viwbE.jpg">
+<p align="center">Você pode criar topicos de sentimentos ou eventos com datas especificas e horarios, com informações relevantes</p>
+</p>
+
+<h3 align="center">Cadastro Sentimento</h3>
+<p align="center">
+<img alt="menu" height="400" src="https://i.imgur.com/vBbkazl.jpg">
+<p align="center">Após criar seu evento haverá opções para informar suas emoções e sentimentos em determinado dia e hora</p>
+</p> 
+
+<h3 align="center">Adicionar evento</h3>
+<p align="center">
+<img alt="menu" height="400" src="https://i.imgur.com/dsZbPCy.jpg">
+<p align="center">Criar um evento importante, como festas, shows ou outros, onde poderá expor seus sentimentos e emoções antes de acontecer</p>
+</p> 
+
+<h3 align="center">Atualizar evento</h3>
+<p align="center">
+<img alt="menu" height="400" src="https://i.imgur.com/de9VEKX.jpg">
+<p align="center">Você pode atualizar ou modificar eventos que seus sentimentos e emoções vão mudando, acrescentar informações que foram lembradas, etc...</p>
+</p> 
+
+<h3 align="center">Calendário</h3>
+<p align="center">
+<img alt="menu" height="400" src="https://i.imgur.com/RBET8oO.jpg">
+<p align="center">Onde é possivel monitorar ou rever eventos e sentimentos ocorridos conforme data de criação</p>
+</p> 
+
+<h3 align="center">Fale Conosco</h3>
+<p align="center">
+<img alt="menu" height="400" src="https://i.imgur.com/og7sFUW.jpg">
+<p align="center">Dúvidas, problemas ou sugestões</p>
+</p> 
+
+<h3 align="center">Doações</h3>
+<p align="center">
+<img alt="menu" height="400" src="https://i.imgur.com/HqopurQ.jpg">
+<p align="center">Does para nosso projeto através do QR CODE, assim podemos melhorar e aprimorar sua experiencia em nossoa aplicativo</p>
 </p> 
 
 ## Instalando o projeto 
