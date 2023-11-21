@@ -139,7 +139,7 @@ Apresentado ao Centro Universitário Senac, como exigência parcial para obtenç
 
 ## Estrutura Conceitual Externa
 
-Foram desenvolvidos esboços com a ideia por trás do projeto, seguido pela fase escrita do <a href="https://docs.google.com/document/d/1SsjEH9fb66FyAfGV1c4hbiNis-jQJqu1K6kDHmtG2fo/edit?usp=sharing">Projeto Formal</a>. Com o uso da ferramenta Figma foi produzido um <a href="https://www.figma.com/file/67pnggN5p9U33kzKVn5T9H/Prot%C3%B3tipo-DiaZen---Projeto-Integrador-Grupo-08?type=design&node-id=0%3A1&mode=design&t=dTaaoBSXYjkMBOlY-1">Modelo Visual Interativo</a> a ser seguido no desenvolvimento de front end e para a produção técnica, foi utilizado múltiplos conhecimentos da equipe.
+Foram desenvolvidos esboços com a ideia por trás do projeto, seguido pela fase escrita do <a href="./Projeto Integrador - Grupo 08 - Fase 2.pdf">Projeto Formal</a>. Com o uso da ferramenta Figma foi produzido um <a href="https://www.figma.com/file/67pnggN5p9U33kzKVn5T9H/Prot%C3%B3tipo-DiaZen---Projeto-Integrador-Grupo-08?type=design&node-id=0%3A1&mode=design&t=dTaaoBSXYjkMBOlY-1">Modelo Visual Interativo</a> a ser seguido no desenvolvimento de front end e para a produção técnica, foi utilizado múltiplos conhecimentos da equipe.
 
 ## Tecnologias Utilizadas
 
